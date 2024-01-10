@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Produtos</title>
+</head>
+<body background="{% static 'home/images/fundo.png' %}">
+    <div style="width: 900px; margin: 20px auto">
+        <img width="213" src="{% static 'home/images/logo.png' %}">
+        <a href="#" style="margin-left: 50%">Home</a> | 
+        <a href="#">Quem Somos</a> | 
+        <a href="#">Contato</a>
+    </div>
+    <div style="width: 900px; margin: -8px auto">
+        <img width="890" src="{% static 'home/images/capa.png' %}">
+    </div>
+    <div style="width: 900px; margin: 0px auto">
+        {% for produto in produtos %}
+        <div style="width: 250px; display: inline-block;">
+            <h3>Nome: {{ produto.nome_produto }}</h3>
+            <p>Descrição: {{ produto.descricao }}p>
+            <p>Categorias: {{ produto.categoria }}</p>
+            <hr>
+            <span>Preço: {{ produto.preco }}</span>
+            <br>
+            <a href="#">Saiba mais!</a>
+        </div>
+        {% endfor %}
+
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
