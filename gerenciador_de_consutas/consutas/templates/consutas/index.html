@@ -1,0 +1,27 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador De Consutas</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'cadastro' %}">Cadastrar Consutas</a>
+        <div class="row">
+            {% for consuta in consutas %}
+            <div class="col">
+                <h2>Nome: {{consuta.nome}} </h2>
+                <h3>Idade: {{consuta.idade}} </h3>
+                <p>Horario: {{consuta.hora}} </p>
+                <span>Data: {{consuta.dat_con}}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% bootstrap_javascript %}
+</body>
+</html>

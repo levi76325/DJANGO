@@ -13,4 +13,4 @@ urlpatterns = [
     path('', index, name='index'),
     path('cadastro/', cadastro, name='cadastro'),
     path('api_cat_filmes', include(router.urls))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
